@@ -64,21 +64,19 @@ export default function ChatWindow({ sessionId, setSessionId }) {
           ))
         )}
 
-        {isTyping && (
+       {isTyping && (
           <div className="message ai typing-indicator">
             <div className="message-avatar">
               <FiMessageSquare />
             </div>
             <div className="message-content">
               <div className="meta">AI Assistant</div>
-              <div className="typing">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div className="text">
+                <em>AI is typing...</em>
               </div>
             </div>
           </div>
-        )}
+        )}
         <div ref={messagesEndRef} />
       </div>
 
